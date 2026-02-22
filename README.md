@@ -323,6 +323,7 @@ Copyright (c) 2026 VCNZN. All rights reserved.
 
 This software is proprietary and confidential. Unauthorized copying, modification, distribution, or reverse engineering is strictly prohibited. Licensed exclusively under a paid subscription. See [LICENSE](LICENSE) for full terms.
 
-**Trading Disclaimer:** This software is a charting tool only and does not constitute financial advice. Trading futures, options, and other financial instruments involves substantial risk of loss. You are solely responsible for your own trading decisions and any resulting profits or losses. Past performance is not indicative of future results.
+**Trading Disclaimer:** This software is a charting tool only and does not constitute financial advice. Trading futures, options, and other financial instruments involves substantial risk of loss. You are solely responsible for your own trading decisions and any resulting profits or losses. Past performance is not indicative of future results. These tools were built and tested on NQ (Nasdaq 100 E-mini futures) — while they should work on other instruments, behavior on other markets has not been extensively verified.
 
 RepeaterV3 is based on the free RepeaterV2 community indicator and does not require a license.
+
