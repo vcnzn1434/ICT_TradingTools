@@ -30,7 +30,7 @@ A professional suite of **drawing tools** and **indicators** for [NinjaTrader 8]
    > **Tip:** Press `Win + R`, type `%USERPROFILE%\Documents\NinjaTrader 8\bin\Custom` and hit Enter to open the folder directly.
 4. **Launch** NinjaTrader 8.
 4. The drawing tools appear in the **Drawing Tools** toolbar. Repeater V3 appears under **Indicators**.
-5. **Activate your license** — right-click any chart → **License Manager** → enter your license key → **Activate**.
+5. **Activate your license** — right-click any chart → **License Manager** → enter your license key (from your Whop Software purchase) → **Activate**.
 
 That's it. One file, no dependencies.
 
@@ -42,7 +42,7 @@ That's it. One file, no dependencies.
 
 1. Right-click on any chart in NinjaTrader.
 2. Select **License Manager** from the context menu.
-3. Enter your license key (from your Whop purchase).
+3. Enter your license key (from your Whop Software purchase).
 4. Click **Activate**.
 5. You'll see **✓ Licensed** when successful.
 
@@ -52,7 +52,7 @@ That's it. One file, no dependencies.
 - Re-validation happens automatically every 4 hours in the background.
 - If you lose internet, a **7-day offline grace period** keeps everything working.
 - After 7 days offline, you'll need to reconnect to revalidate.
-- Your license is tied to your machine — contact support if you switch computers.
+- Your license is tied to your machine — use the **Reset** button on your Whop product page to transfer to a new computer.
 
 ### Status indicators
 
@@ -277,7 +277,7 @@ All zone and line tools include alerts powered by a shared alert engine:
 
 ## Updating
 
-1. Download the latest **ICT_DrawingTools.dll** from your Whop purchase page.
+1. Download the latest **ICT_DrawingTools.dll** from your Whop Files page.
 2. Close NinjaTrader 8.
 3. Replace the existing DLL in `Documents\NinjaTrader 8\bin\Custom\`.
 4. Launch NinjaTrader 8.
@@ -289,7 +289,7 @@ Your license stays active — no re-activation needed after updates.
 ## FAQ
 
 **Q: How many machines can I use my license on?**
-A: One machine per license. Contact support if you need to transfer to a new computer.
+A: One machine per license. You can transfer it yourself via Whop (see below).
 
 **Q: What happens if my subscription expires?**
 A: The drawing tools stop rendering on your charts. Your existing drawings are preserved and will reappear when you resubscribe.
@@ -301,7 +301,7 @@ A: No. Repeater V3 is free and works without activation.
 A: Yes. The tools work on all chart types — live, sim, and replay.
 
 **Q: I switched computers. How do I transfer my license?**
-A: Deactivate on your old machine first (License Manager → Deactivate), then activate on the new one. If you no longer have access to the old machine, contact support.
+A: Go to your Whop product page and click the **Reset** button on your Software license. This clears the machine binding. Then install the DLL on your new computer and activate with the same license key. No need to contact support.
 
 **Q: The tools don't appear after installing. What do I do?**
 A: Make sure the DLL is in the correct folder (`Documents\NinjaTrader 8\bin\Custom\`), not a subfolder. Restart NinjaTrader completely (close all windows, not just the chart).
@@ -310,10 +310,12 @@ A: Make sure the DLL is in the correct folder (`Documents\NinjaTrader 8\bin\Cust
 
 ## Support
 
-For help, questions, or feature requests:
+For bugs, issues, or feature requests:
 
-- Visit your **Whop purchase page** for community access and direct support
-- Include your **Machine ID** (found in License Manager) when contacting support
+- Visit your **Whop product page** for community access and direct support
+- Include your **Machine ID** (found in License Manager) when reporting issues
+
+> **Note:** For machine transfers, use the **Reset** button on your Whop Software license — no need to contact support.
 
 ---
 
