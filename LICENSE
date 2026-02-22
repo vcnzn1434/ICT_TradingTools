@@ -18,14 +18,19 @@ Copyright (c) 2026 VCNZN. All rights reserved.
 
 4. NO WARRANTY
    This software is provided "as is" without warranty of any kind,
-   express or implied. The software is not intended as financial
-   advice. All trading decisions are made solely by the user.
+   express or implied. The software was built and tested on NQ
+   (Nasdaq 100 E-mini futures) only. While it may function on other
+   instruments, behavior on other markets has not been extensively
+   verified and is not guaranteed. The software is not intended as
+   financial advice. All trading decisions are made solely by the user.
 
 5. TRADING DISCLAIMER
    Trading futures, options, and other financial instruments involves
    substantial risk of loss and is not suitable for all investors.
    Past performance is not indicative of future results. The software
    is a charting tool only and does not guarantee any trading outcomes.
+   This software was developed and tested exclusively on NQ (Nasdaq
+   100 E-mini futures). Use on other instruments is at your own risk.
    You are solely responsible for your own trading decisions and any
    resulting profits or losses.
 
@@ -36,3 +41,64 @@ Copyright (c) 2026 VCNZN. All rights reserved.
    trading losses, loss of data, or any other damages arising from
    the use or inability to use this software, even if advised of
    the possibility of such damages.
+
+7. INDEMNIFICATION
+   You agree to indemnify, defend, and hold harmless VCNZN, its
+   officers, employees, and affiliates from and against any and all
+   claims, damages, losses, liabilities, costs, and expenses
+   (including reasonable attorneys' fees) arising out of or related
+   to your use of the software, your trading activities, or your
+   violation of this agreement.
+
+8. THIRD-PARTY SERVICES
+   This software integrates with third-party services including but
+   not limited to NinjaTrader, Pushover, and Whop. VCNZN is not
+   responsible for the availability, reliability, or functionality
+   of any third-party service. Third-party services are governed by
+   their own terms of service and privacy policies. Any disruption,
+   change, or discontinuation of a third-party service does not
+   entitle you to a refund or damages.
+
+9. DATA COLLECTION
+   This software transmits your license key and a hardware identifier
+   (HWID) to VCNZN servers for license validation. No personal data,
+   trading data, account information, or chart content is collected
+   or transmitted. By using this software, you consent to this
+   limited data transmission for license verification purposes.
+
+10. NO PROFESSIONAL ADVICE
+    VCNZN is not a registered investment advisor, broker-dealer, or
+    financial planner. Nothing in this software or its documentation
+    constitutes investment advice, trading recommendations, or
+    financial guidance. You should consult a qualified financial
+    professional before making any trading or investment decisions.
+
+11. GOVERNING LAW & JURISDICTION
+    This agreement shall be governed by and construed in accordance
+    with applicable law. Any disputes arising under or in connection
+    with this agreement shall be resolved in the courts of competent
+    jurisdiction. Both parties consent to the exclusive jurisdiction
+    of such courts.
+
+12. SEVERABILITY
+    If any provision of this agreement is held to be invalid,
+    illegal, or unenforceable, the remaining provisions shall
+    continue in full force and effect.
+
+13. MODIFICATION OF TERMS
+    VCNZN reserves the right to modify this agreement at any time.
+    Updated terms will be included with new versions of the software.
+    Continued use of the software after such modifications
+    constitutes acceptance of the revised terms.
+
+14. AGE REQUIREMENT
+    You must be at least 18 years of age to use this software. By
+    using this software, you represent and warrant that you are at
+    least 18 years old.
+
+15. ACCEPTANCE
+    By installing, copying, or otherwise using this software, you
+    acknowledge that you have read, understood, and agree to be
+    bound by the terms of this agreement. If you do not agree to
+    these terms, do not install or use the software.
+
