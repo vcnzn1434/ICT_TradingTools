@@ -10,6 +10,7 @@ A professional suite of **drawing tools** and **indicators** for [NinjaTrader 8]
 - [License Activation](#license-activation)
 - [Tools](#tools)
 - [Feature Matrix](#feature-matrix)
+- [Export Drawings](#export-drawings)
 - [Alerts & Push Notifications](#alerts--push-notifications)
 - [Updating](#updating)
 - [FAQ](#faq)
@@ -76,13 +77,12 @@ Click **Deactivate** in the License Manager window to remove the stored key from
 Detects and draws Fair Value Gap and Volume Imbalance zones with optional chaining into combined zones.
 
 - **Auto-detection** of Bullish / Bearish FVGs from your click position
-- **7 interval presets** — Weekly, Daily, 60m, 15m, 5m, 1m, 15s — each with independent colors and opacity
+- **8 interval presets** — each with independent colors and opacity
 - **Volume Imbalance** detection with FVG+VI chaining into mixed zones
 - **Risk display** — currency, points, ticks, or percentage from zone edge
 - **Price display** — Full price, last 2/3/4 digits, or ticks-from-current
 - **Gap size** — points, ticks, percentage, or currency
 - **Midpoint & quadrant lines** for precise levels within the zone
-- **3 text templates** with find/replace for quick label customization
 - **Extension modes** — auto-extend, extend to session end, or extend to clicked session end
 - **Alerts** — NinjaTrader sound + Pushover push notifications
 
@@ -90,7 +90,7 @@ Detects and draws Fair Value Gap and Volume Imbalance zones with optional chaini
 
 Draws Order Block zones with full annotation and analysis features.
 
-- Midline and quadrant level splits
+- Midpoint and quadrant level splits
 - Price, size, and risk text displays
 - Auto-extend, session-end extend, and cut-extend modes
 - Alerts with Pushover support
@@ -117,7 +117,6 @@ A fast, general-purpose rectangle/zone drawing tool with two-click placement.
 - Midpoint & quadrant lines
 - Price, zone size, and risk displays
 - Auto-extend, session-end extend, cut-extend modes
-- 3 text templates with find/replace
 - Alerts with Pushover support
 - Full right-click context menu
 
@@ -176,8 +175,12 @@ Auto-draws time/price regions on a repeating schedule. Based on the community Re
 
 One-click chart screenshots saved to a configurable folder.
 
-- Keyboard shortcut support
-- Toolbar button with camera icon
+- Keyboard shortcut support (Ctrl+Shift+S)
+- Toolbar camera icon — click to capture
+- Toolbar folder icon — click to choose save folder
+- Configurable save folder (defaults to `Pictures\Screenshots`)
+- Audible confirmation sound on capture
+- Auto-copies screenshot to clipboard
 - High-DPI and multi-monitor aware
 
 ---
@@ -197,6 +200,65 @@ One-click chart screenshots saved to a configurable folder.
 | Alerts | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | — | — | — |
 | Pushover | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | — | — | — |
 | Right-click menu | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
+
+---
+
+## Export Drawings
+
+Export all visible drawings on a chart to a structured CSV file for journaling, review, or external analysis.
+
+### How to export
+
+1. Right-click anywhere on a chart.
+2. Click **Export Drawings for Date**.
+3. A CSV file is saved automatically to:
+   ```
+   Documents\NinjaTrader 8\DrawingExport\
+   ```
+
+The export uses the date at your click position — all drawings whose time range overlaps that date are included. Only drawings that are **visible on the current chart** are exported (scrolled-off drawings are excluded).
+
+### What gets exported
+
+The export captures every ICT Drawing Tool plus indicator-generated drawings (e.g., Repeater V3 rectangles). Each row is one drawing with these columns:
+
+| Column | Description |
+|--------|-------------|
+| ToolType | Drawing tool name (FVGTool, OrderBlockTool, ZoneTool, etc.) |
+| Direction | Bullish / Bearish / Long / Short (where applicable) |
+| Interval | Chart interval the drawing was created on (e.g., 1 Min, 5 Min) |
+| StartTime | Left edge timestamp |
+| EndTime | Right edge timestamp |
+| TopPrice | Upper price boundary |
+| BottomPrice | Lower price boundary |
+| Price | Single-price value (lines, markers, position entry) |
+| Midpoint | Midpoint price (if midpoint is enabled) |
+| Q1_25pct | Lower quadrant price (if quadrants are enabled) |
+| Q3_75pct | Upper quadrant price (if quadrants are enabled) |
+| MidpointEnabled | Whether midpoint line is on |
+| QuadrantsEnabled | Whether quadrant lines are on |
+| Label | Text label / annotation on the drawing |
+| Tag | Drawing tag identifier |
+| CandleOpen/High/Low/Close | OHLC data (Price & Time Marker only) |
+
+**Position Tool** rows include additional dynamic columns: EntryPrice, StopPrice, RiskMethod, RiskValue, TargetMethod, per-target prices/R:R/scale-out percentages, BestRR, Account, and order types.
+
+**Third-party / native NinjaTrader drawings** (rectangles, lines, regions) are captured using a generic fallback that reads all anchors and whitelisted trading-relevant properties automatically.
+
+### File naming
+
+Files are named with the format:
+```
+Export_<Instrument>_<Date>_<Time>.csv
+```
+For example: `Export_ES_2026-02-22_143052.csv`
+
+### Notes
+
+- Requires an active license.
+- Indicator-generated drawing tags are cleaned automatically (trailing event/bar suffixes are stripped).
+- Columns are dynamic — only columns with data appear in the output. Position-specific fields won't clutter exports that contain only zone tools.
+- Auto-extending zones are always included if their start time is on or before the target date.
 
 ---
 
