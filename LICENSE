@@ -24,15 +24,37 @@ Copyright (c) 2026 VCNZN. All rights reserved.
    verified and is not guaranteed. The software is not intended as
    financial advice. All trading decisions are made solely by the user.
 
-5. TRADING DISCLAIMER
-   Trading futures, options, and other financial instruments involves
-   substantial risk of loss and is not suitable for all investors.
-   Past performance is not indicative of future results. The software
-   is a charting tool only and does not guarantee any trading outcomes.
-   This software was developed and tested exclusively on NQ (Nasdaq
-   100 E-mini futures). Use on other instruments is at your own risk.
-   You are solely responsible for your own trading decisions and any
-   resulting profits or losses.
+5. TRADING & RISK DISCLAIMER
+   FUTURES AND OPTIONS TRADING INVOLVES SUBSTANTIAL RISK OF LOSS AND
+   IS NOT SUITABLE FOR ALL INVESTORS. Past performance is not
+   necessarily indicative of future results. The risk of loss in
+   trading commodity futures, options, and foreign exchange ("forex")
+   is substantial. You should therefore carefully consider whether
+   such trading is suitable for you in light of your financial
+   condition. The high degree of leverage that is often obtainable in
+   commodity futures, options, and forex trading can work against you
+   as well as for you. The use of leverage can lead to large losses
+   as well as gains.
+
+   CFTC RULE 4.41 — HYPOTHETICAL OR SIMULATED PERFORMANCE RESULTS
+   HAVE CERTAIN LIMITATIONS. UNLIKE AN ACTUAL PERFORMANCE RECORD,
+   SIMULATED RESULTS DO NOT REPRESENT ACTUAL TRADING. ALSO, SINCE
+   THE TRADES HAVE NOT BEEN EXECUTED, THE RESULTS MAY HAVE UNDER-OR-
+   OVER COMPENSATED FOR THE IMPACT, IF ANY, OF CERTAIN MARKET
+   FACTORS, SUCH AS LACK OF LIQUIDITY. SIMULATED TRADING PROGRAMS IN
+   GENERAL ARE ALSO SUBJECT TO THE FACT THAT THEY ARE DESIGNED WITH
+   THE BENEFIT OF HINDSIGHT. NO REPRESENTATION IS BEING MADE THAT
+   ANY ACCOUNT WILL OR IS LIKELY TO ACHIEVE PROFIT OR LOSSES SIMILAR
+   TO THOSE SHOWN.
+
+   This software is a charting and drawing tool only. It does not
+   provide trading signals, execute trades, or guarantee any trading
+   outcomes. All trading decisions are made solely by the user. VCNZN
+   is not a registered investment advisor, broker-dealer, or futures
+   commission merchant. This software was developed and tested
+   exclusively on NQ (Nasdaq 100 E-mini futures). Use on other
+   instruments is at your own risk. You are solely responsible for
+   your own trading decisions and any resulting profits or losses.
 
 6. LIMITATION OF LIABILITY
    In no event shall VCNZN be liable for any direct, indirect,
