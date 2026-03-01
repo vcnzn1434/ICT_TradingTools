@@ -10,11 +10,13 @@ A professional suite of **drawing tools** and **indicators** for [NinjaTrader 8]
 - [License Activation](#license-activation)
 - [Tools](#tools)
 - [Feature Matrix](#feature-matrix)
+- [FPS Counter](#fps-counter)
 - [Export Drawings](#export-drawings)
 - [Alerts & Push Notifications](#alerts--push-notifications)
 - [Updating](#updating)
 - [FAQ](#faq)
 - [Support](#support)
+- [Our Mission](#our-mission)
 - [Legal](#legal)
 
 ---
@@ -29,7 +31,7 @@ A professional suite of **drawing tools** and **indicators** for [NinjaTrader 8]
    ```
    > **Tip:** Press `Win + R`, type `%USERPROFILE%\Documents\NinjaTrader 8\bin\Custom` and hit Enter to open the folder directly.
 4. **Launch** NinjaTrader 8.
-4. The drawing tools appear in the **Drawing Tools** toolbar. Repeater V3 appears under **Indicators**.
+4. The drawing tools appear in the **Drawing Tools** toolbar. Repeater V3 and FPS Counter appear under **Indicators**.
 5. **Activate your license** — right-click any chart → **License Manager** → enter your license key (from your Whop Software purchase) → **Activate**.
 
 That's it. One file, no dependencies.
@@ -160,6 +162,20 @@ Inline text labels and callout annotations with leader lines.
 - 8 text alignment positions
 - Callout mode with connection point and leader line
 
+### FPS Counter (Free Indicator)
+
+A lightweight, passive performance monitor that displays chart rendering frame rate and tick throughput.
+
+- **No license required** — works for everyone
+- **Zero forced redraws** — purely passive, counts natural chart repaints
+- **Render FPS** — measures how many times per second the chart actually redraws
+- **Tick Rate (TPS)** — measures incoming ticks per second during live market
+- **FPS vs TPS comparison** — if FPS drops below TPS, your chart is struggling to keep up with incoming data
+- Configurable corner position (top-left, top-right, bottom-left, bottom-right)
+- Customizable text color, background color, and font size
+- Idle detection — FPS decays to 0 when chart is not redrawing
+- Monospace Consolas font in a rounded pill overlay
+
 ### Repeater V3 (Free Indicator)
 
 Auto-draws time/price regions on a repeating schedule. Based on the community RepeaterV2 with a dynamic rectangle outline opacity fix.
@@ -200,6 +216,43 @@ One-click chart screenshots saved to a configurable folder.
 | Alerts | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | — | — | — |
 | Pushover | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | — | — | — |
 | Right-click menu | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
+
+---
+
+## FPS Counter
+
+The FPS Counter is a free, zero-overhead diagnostic indicator that passively measures your chart's rendering performance.
+
+### What it shows
+
+| Metric | Meaning |
+|--------|---------|
+| **FPS** (Frames Per Second) | How many times per second the chart is actually redrawing |
+| **TPS** (Ticks Per Second) | How many market ticks are arriving per second (live market only) |
+
+### How to interpret
+
+- **FPS ≈ TPS** — Your chart is rendering comfortably, keeping up with every tick.
+- **FPS < TPS** — The chart can't render fast enough; NinjaTrader is coalescing/dropping frames. Consider reducing visible drawings or switching to a simpler chart type.
+- **FPS = 0** — Normal when the market is closed and you're not interacting with the chart. The chart only redraws when there's a reason to.
+- **High FPS during scrolling/zooming** — Reflects how fast the chart redraws during user interaction.
+
+### Settings
+
+| Property | Default | Description |
+|----------|---------|-------------|
+| Text Color | White | Display text color |
+| Background Color | Semi-transparent dark | Pill background |
+| Font Size | 12 | Consolas bold monospace |
+| Position | Top Right | Corner placement |
+| Show Tick Rate | On | Display TPS alongside FPS during live market |
+
+### Notes
+
+- No license required.
+- Adds no forced redraws — purely counts existing `OnRender` calls.
+- Negligible rendering cost (one small text overlay per frame).
+- TPS is only shown during live/realtime market data.
 
 ---
 
@@ -297,6 +350,12 @@ A: The drawing tools stop rendering on your charts. Your existing drawings are p
 **Q: Does Repeater V3 require a license?**
 A: No. Repeater V3 is free and works without activation.
 
+**Q: Does FPS Counter require a license?**
+A: No. FPS Counter is free and works without activation.
+
+**Q: FPS Counter shows 0 when the market is closed. Is it broken?**
+A: No. It only counts actual chart redraws. When no data is arriving and you're not interacting with the chart, the chart doesn't redraw, so FPS is correctly 0.
+
 **Q: Can I use this with NinjaTrader's Sim (demo) account?**
 A: Yes. The tools work on all chart types — live, sim, and replay.
 
@@ -319,6 +378,24 @@ For bugs, issues, or feature requests:
 
 ---
 
+## Our Mission
+
+In markets that move with depth and structure — fractal in nature, reflecting the order of His Word — we center our trading on the True Living God, the One who declares the end from the beginning.
+
+In every session, we pray:
+
+> *Lord, discipline our hearts and minds so we may reflect who You are shaping us to become.*
+
+Because markets require more than skill — they require Godly attributes. Guide us and allow us this:
+
+- **Forgiveness** — Let yesterday's mistakes stay in yesterday.
+- **Patience** — Wait with intention. Act with discipline.
+- **Wisdom** — Discern the ever-changing conditions with clarity.
+
+*In Jesus' name, Amen.*
+
+---
+
 ## Legal
 
 Copyright (c) 2026 VCNZN. All rights reserved.
@@ -328,4 +405,7 @@ This software is proprietary and confidential. Unauthorized copying, modificatio
 **Trading Disclaimer:** This software is a charting tool only and does not constitute financial advice. Trading futures, options, and other financial instruments involves substantial risk of loss. You are solely responsible for your own trading decisions and any resulting profits or losses. Past performance is not indicative of future results. These tools were built and tested on NQ (Nasdaq 100 E-mini futures) — while they should work on other instruments, behavior on other markets has not been extensively verified.
 
 RepeaterV3 is based on the free RepeaterV2 community indicator and does not require a license.
+
+FPS Counter is a free utility indicator and does not require a license.
+
 
